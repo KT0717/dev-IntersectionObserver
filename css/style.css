@@ -1,0 +1,75 @@
+.text {
+  width: 500px;
+  height: 192px;
+  background-color: #202f55;
+}
+
+.text p {
+  color: #FFFFFF;
+  font-size: 18px;
+  text-align: center;
+  padding: 10px;
+}
+
+/*------------------------------
+ アニメーション
+------------------------------*/
+.text {
+  padding-left: 19px;
+  margin-bottom: 58px;
+  transition: transform .5s,opacity .3s;
+  transform: translateY(40px);
+  opacity: 0;
+}
+
+.text.anime-show {
+  transform: translate(0);
+  opacity: 1;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+
+.logo-fade-in {
+  animation: logoFadeIn .5s
+}
+
+@keyframes logoFadeIn {
+  0% {
+    opacity: 0;
+    pointer-events: none
+  }
+
+  99.9%,
+  to {
+    opacity: 1;
+    pointer-events: auto
+  }
+}
+
+.kv-fade-in {
+  animation: kvFadeIn .8s
+}
+
+@keyframes kvFadeIn {
+  0% {
+    opacity: 0;
+    pointer-events: none
+  }
+
+  99.9%,
+  to {
+    opacity: 1;
+    pointer-events: auto
+  }
+}
