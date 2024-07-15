@@ -1,19 +1,26 @@
-window.addEventListener("load", () => {
+// window.addEventListener("load", () => {
 
-  const options = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.5
-  }
+//   const options = {
+//     root: null,
+//     rootMargin: '0px',
+//     threshold: 0.5
+//   }
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('anime-show')
-      }
-    });
-  }, options);
+//   const observer = new IntersectionObserver((entries) => {
+//     entries.forEach((entry) => {
+//       if (entry.isIntersecting) {
+//         entry.target.classList.add('anime-show')
+//       }
+//     });
+//   }, options);
 
-  observer.observe(document.querySelector('.text'));
+//   observer.observe(document.querySelector('.text'));
 
-}, false);
+// }, false);
+
+$(function () {
+  $('.test').on('click', function () {
+    console.log('test');
+    $(this).find("img").toggleClass('active');
+  });
+});
